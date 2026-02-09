@@ -44,7 +44,7 @@ jobs:
         with:
           ci-owner: xiangxuepf
           ci-repository: my-flask-demo-kustomize
-          ci-ref: refs/heads/master
+          ci-ref: refs/heads/main
           ci-user: xiangxuepf
           ci-user-token: ${{ secrets.CI_TOKEN }}
           ci-name: CI
