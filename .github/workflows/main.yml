@@ -36,8 +36,8 @@ jobs:
       - name: build image
         run: |
           make image
-          docker tag flask-demo:latest ${{ secrets.USERNAME }}/flask-demo:${{ github.sha }}
-          docker push ${{ secrets.USERNAME }}/flask-demo:${{ github.sha }}
+          docker tag flask-demo2:latest ${{ secrets.USERNAME }}/flask-demo2:${{ github.sha }}
+          docker push ${{ secrets.USERNAME }}/flask-demo2:${{ github.sha }}
 
       - name: Trigger CI
         uses: InformaticsMatters/trigger-ci-action@1.0.1
@@ -49,5 +49,5 @@ jobs:
           ci-user-token: ${{ secrets.CI_TOKEN }}
           ci-name: CI
           ci-inputs: >-
-            image=${{ secrets.USERNAME }}/flask-demo
+            image=${{ secrets.USERNAME }}/flask-demo2
             sha-tag=${{ github.sha }}
